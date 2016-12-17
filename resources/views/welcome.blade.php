@@ -1,3 +1,4 @@
+
 @extends('layouts.master')
 
 @section('title','Welcome Welcome')
@@ -5,26 +6,26 @@
 @section('content')
 
     <div class="row">
-
         <div class="col-md-6">
             <h3>Sign Up</h3>
-            <form action="#" method="post">
+            <form action="{{ route('signup') }}" method="POST">
                 <div class="form-group">
-                    <label for="email">Your email</label>
+                    <label for="email">Your email:</label>
                     <input class="form-control" type="text" name="email" id="email">
                 </div>
 
                 <div class="form-group">
-                    <label for="first_name">Your first name</label>
+                    <label for="first_name">Your first name:</label>
                     <input class="form-control" type="text" name="first_name" id="first_name">
                 </div>
 
                 <div class="form-group">
-                    <label for="password">Your email</label>
+                    <label for="password">Your password:</label>
                     <input class="form-control" type="password" name="password" id="password">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
+                <input type="hidden" name="_token" value="{{ Session::token() }}">
             </form>
         </div>
 
@@ -44,6 +45,8 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
+
+
             </form>
         </div>
 
