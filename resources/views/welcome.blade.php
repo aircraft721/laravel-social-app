@@ -1,45 +1,53 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layouts.master')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('title','Welcome Welcome')
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+@section('content')
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
+    <div class="row">
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
+        <div class="col-md-6">
+            <h3>Sign Up</h3>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="email">Your email</label>
+                    <input class="form-control" type="text" name="email" id="email">
+                </div>
 
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
+                <div class="form-group">
+                    <label for="first_name">Your first name</label>
+                    <input class="form-control" type="text" name="first_name" id="first_name">
+                </div>
 
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-            </div>
+                <div class="form-group">
+                    <label for="password">Your email</label>
+                    <input class="form-control" type="password" name="password" id="password">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
-    </body>
-</html>
+
+
+
+        <div class="col-md-6">
+            <h3>Sign In</h3>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="email">Your email</label>
+                    <input class="form-control" type="text" name="email" id="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Your email</label>
+                    <input class="form-control" type="password" name="password" id="password">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+
+    </div>
+
+@stop
