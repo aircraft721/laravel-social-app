@@ -48,3 +48,9 @@ Route::get('/delete-post/{post_id}',[
     'as'=>'post.delete',
     'middleware'=>'auth'
 ]);
+
+Route::post('/edit',function(\Illuminate\Http\Request $request){
+    return response()->json([
+        'message'=>$request['postId']
+    ]);
+})->name('edit');
