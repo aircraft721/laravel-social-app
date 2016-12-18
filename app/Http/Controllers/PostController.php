@@ -9,6 +9,15 @@ use App\Http\Requests;
 
 class PostController extends Controller
 {
+    public function getDashboard(){
+
+        $posts = Post::all();
+
+        return view('dashboard')->withPosts($posts);
+    }
+
+
+
     public function postCreatePost(Request $request){
 
         $this->validate($request,[
