@@ -53,3 +53,13 @@ Route::post('/edit', [
     'uses' =>'PostController@postEditPost',
     'as'=>'edit'
 ]);
+
+Route::get('/account', [
+    'uses'=>'UserController@getAccount',
+    'as'=>'account'
+]);
+
+Route::post('/updateaccount',[
+    'uses'=>'UserController@postSaveAccount',
+    'as'=>'account.save'
+]);
