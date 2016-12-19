@@ -55,4 +55,6 @@ class PostController extends Controller
         $post->update();
         return response()->json(['new_body'=>$post->body], 200);
     }
+
+
 }
